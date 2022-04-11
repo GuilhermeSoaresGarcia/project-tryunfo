@@ -1,10 +1,10 @@
-.cadastro {  
+.cadastro {
   display: flex;
   flex-direction: column;
 }
 
-.cadastro label {  
-  padding: 10px;  
+.cadastro label {
+  padding: 10px;
 }
 
 .cadastro button {
