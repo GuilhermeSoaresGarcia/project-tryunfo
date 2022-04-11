@@ -50,9 +50,9 @@ class Card extends React.Component {
         </p>
 
         {
-          (cardTrunfo)
+          cardTrunfo
             ? <span data-testid="trunfo-card">Super Trunfo</span>
-            : <span> </span>
+            : ''
         }
 
       </div>);

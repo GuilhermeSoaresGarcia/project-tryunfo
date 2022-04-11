@@ -24,7 +24,7 @@ class Form extends React.Component {
         <label htmlFor="name">
           <span>Nome da carta: </span>
           <input
-            name="nome"
+            name="cardName"
             id="name"
             data-testid="name-input"
             value={ cardName }
