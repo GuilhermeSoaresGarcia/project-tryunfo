@@ -1,0 +1,13 @@
+.cadastro {  
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro label {  
+  padding: 10px;  
+}
+
+.cadastro button {
+  align-self: center;
+  width: 100px;
+}
