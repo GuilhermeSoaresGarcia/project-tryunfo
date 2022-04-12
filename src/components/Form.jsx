@@ -35,7 +35,7 @@ class Form extends React.Component {
         <label htmlFor="card-description">
           <span>Descrição da carta: </span>
           <textarea
-            name="descricao"
+            name="cardDescription"
             id="card-description"
             data-testid="description-input"
             cols="30"
@@ -49,7 +49,7 @@ class Form extends React.Component {
           <span>Atributo 1: </span>
           <input
             type="number"
-            name="atributo1"
+            name="cardAttr1"
             id="attr1"
             data-testid="attr1-input"
             value={ cardAttr1 }
@@ -61,7 +61,7 @@ class Form extends React.Component {
           <span>Atributo 2: </span>
           <input
             type="number"
-            name="atributo2"
+            name="cardAttr2"
             id="attr2"
             data-testid="attr2-input"
             value={ cardAttr2 }
@@ -73,7 +73,7 @@ class Form extends React.Component {
           <span>Atributo 3: </span>
           <input
             type="number"
-            name="atributo3"
+            name="cardAttr3"
             id="attr3"
             data-testid="attr3-input"
             value={ cardAttr3 }
@@ -84,7 +84,7 @@ class Form extends React.Component {
         <label htmlFor="img">
           <span>Imagem da carta: </span>
           <input
-            name="imagem"
+            name="cardImage"
             id="img"
             data-testid="image-input"
             value={ cardImage }
@@ -95,7 +95,7 @@ class Form extends React.Component {
         <label htmlFor="rarity">
           <span>Raridade: </span>
           <select
-            name="raridade"
+            name="cardRare"
             id="rarity"
             data-testid="rare-input"
             value={ cardRare }
@@ -111,7 +111,7 @@ class Form extends React.Component {
           <span>Super-Trunfo! </span>
           <input
             type="checkbox"
-            name="supertrunfo"
+            name="cardTrunfo"
             id="supertrunfo"
             data-testid="trunfo-input"
             checked={ cardTrunfo }
@@ -133,30 +133,18 @@ class Form extends React.Component {
 }
 
 Form.propTypes = {
-  cardName: PropTypes.string,
-  cardDescription: PropTypes.string,
-  cardAttr1: PropTypes.string,
-  cardAttr2: PropTypes.string,
-  cardAttr3: PropTypes.string,
-  cardImage: PropTypes.string,
-  cardRare: PropTypes.string,
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.number.isRequired,
+  cardAttr2: PropTypes.number.isRequired,
+  cardAttr3: PropTypes.number.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
   // hasTrunfo: PropTypes.bool,
-  isSaveButtonDisabled: PropTypes.bool,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
-};
-
-Form.defaultProps = {
-  cardName: '',
-  cardDescription: '',
-  cardAttr1: '',
-  cardAttr2: '',
-  cardAttr3: '',
-  cardImage: '',
-  cardRare: '',
-  // hasTrunfo: false,
-  isSaveButtonDisabled: false,
 };
 
 export default Form;

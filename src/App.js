@@ -7,14 +7,14 @@ class App extends React.Component {
     super();
 
     this.state = {
-      cardName: 'asdasdasd',
-      cardDescription: 'descrição',
-      cardAttr1: '90',
-      cardAttr2: '100',
-      cardAttr3: '25',
-      cardImage: '../',
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardImage: '',
       cardRare: '',
-      cardTrunfo: false,
+      cardTrunfo: '',
     };
   }
 
@@ -26,12 +26,41 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
+
     return (
       <div>
         <h1>Tryunfo</h1>
-        <Form cardName={this.state.cardName} />
-        <Card cardName={this.state.cardName} />
+        <Form
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
+          onInputChange={ this.onInputChange }
+        />
+        <Card
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
+        />
       </div>
     );
   }
