@@ -27,7 +27,8 @@ class Form extends React.Component {
             name="cardName"
             id="name"
             data-testid="name-input"
-            value={ cardName }
+            // eslint-disable-next-line react/jsx-curly-spacing
+            value={cardName}
             onChange={ onInputChange }
           />
         </label>
