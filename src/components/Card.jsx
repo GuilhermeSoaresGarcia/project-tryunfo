@@ -17,37 +17,37 @@ class Card extends React.Component {
     return (
       <div className="card">
 
-        <h2 data-testid="name-card">{cardName}</h2>
+        <h2 data-testid="name-card">{ cardName }</h2>
 
         <img
           // eslint-disable-next-line react/jsx-curly-spacing
-          src={cardImage}
+          src={ cardImage }
           alt={ cardName }
           data-testid="image-card"
         />
 
         <p data-testid="description-card">
-          {cardDescription}
+          { cardDescription }
         </p>
 
         <p data-testid="attr1-card">
           <span>Atributo 1: </span>
-          {cardAttr1}
+          { cardAttr1 }
         </p>
 
         <p data-testid="attr2-card">
           <span>Atributo 2: </span>
-          {cardAttr2}
+          { cardAttr2 }
         </p>
 
         <p data-testid="attr3-card">
           <span>Atributo 3: </span>
-          {cardAttr3}
+          { cardAttr3 }
         </p>
 
         <p data-testid="rare-card">
           <span>Raridade: </span>
-          {cardRare}
+          { cardRare }
         </p>
 
         {
