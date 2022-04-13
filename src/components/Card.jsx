@@ -20,7 +20,6 @@ class Card extends React.Component {
         <h2 data-testid="name-card">{ cardName }</h2>
 
         <img
-          // eslint-disable-next-line react/jsx-curly-spacing
           src={ cardImage }
           alt={ cardName }
           data-testid="image-card"
