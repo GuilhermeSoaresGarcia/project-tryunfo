@@ -111,7 +111,6 @@ class App extends React.Component {
     };
     const { cardCollection } = this.state;
     cardCollection.push(card);
-    this.hasTrunfo();
     this.clearFields();
   }
 
@@ -143,7 +142,7 @@ class App extends React.Component {
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
           onSaveButtonClick={ this.onSaveButtonClick }
-          hasTrunfo={ this.hasTrunfo }
+          hasTrunfo={ this.hasTrunfo() }
         />
         <Card
           cardName={ cardName }

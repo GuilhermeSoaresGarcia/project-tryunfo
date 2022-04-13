@@ -109,7 +109,7 @@ class Form extends React.Component {
 
         <label htmlFor="supertrunfo">
           {
-            hasTrunfo()
+            hasTrunfo
               ? <span>Você já tem um Super Trunfo em seu baralho.</span>
               : (
                 <>
@@ -150,7 +150,7 @@ Form.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  hasTrunfo: PropTypes.func.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
   isSaveButtonDisabled: PropTypes.bool.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
