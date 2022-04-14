@@ -8,59 +8,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      cardCollection:
-        [
-          // {
-          //   cardName: 'Carta1',
-          //   cardDescription: 'Descrição',
-          //   cardAttr1: '10',
-          //   cardAttr2: '20',
-          //   cardAttr3: '55',
-          //   cardImage: 'imgcard',
-          //   cardRare: 'normal',
-          //   cardTrunfo: false,
-          // },
-          // {
-          //   cardName: 'Carta2',
-          //   cardDescription: 'Descrição',
-          //   cardAttr1: '10',
-          //   cardAttr2: '20',
-          //   cardAttr3: '55',
-          //   cardImage: 'imgcard',
-          //   cardRare: 'normal',
-          //   cardTrunfo: false,
-          // },
-          // {
-          //   cardName: 'Carta3',
-          //   cardDescription: 'Descrição',
-          //   cardAttr1: '10',
-          //   cardAttr2: '20',
-          //   cardAttr3: '55',
-          //   cardImage: 'imgcard',
-          //   cardRare: 'normal',
-          //   cardTrunfo: false,
-          // },
-          // {
-          //   cardName: 'Carta4',
-          //   cardDescription: 'Descrição',
-          //   cardAttr1: '10',
-          //   cardAttr2: '20',
-          //   cardAttr3: '55',
-          //   cardImage: 'imgcard',
-          //   cardRare: 'normal',
-          //   cardTrunfo: false,
-          // },
-          // {
-          //   cardName: 'Carta5',
-          //   cardDescription: 'Descrição',
-          //   cardAttr1: '10',
-          //   cardAttr2: '20',
-          //   cardAttr3: '55',
-          //   cardImage: 'imgcard',
-          //   cardRare: 'normal',
-          //   cardTrunfo: false,
-          // },
-        ],
+      cardCollection: [],
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -163,8 +111,11 @@ class App extends React.Component {
       cardTrunfo,
     };
 
-    const { cardCollection } = this.state;
-    cardCollection.push(card);
+    // const { cardCollection } = this.state;
+    // cardCollection.push(card);
+    this.setState((prevState) => ({
+      cardCollection: [...prevState.cardCollection, card],
+    }));
     this.clearFields();
   }
 
@@ -187,32 +138,32 @@ class App extends React.Component {
         <h1>Tryunfo</h1>
         <main>
           <Form
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ cardImage }
-            cardRare={ cardRare }
-            cardTrunfo={ this.cardTrunfo }
-            isSaveButtonDisabled={ isSaveButtonDisabled }
-            onInputChange={ this.onInputChange }
-            onSaveButtonClick={ this.onSaveButtonClick }
-            hasTrunfo={ this.hasTrunfo() }
+            cardName={cardName}
+            cardDescription={cardDescription}
+            cardAttr1={cardAttr1}
+            cardAttr2={cardAttr2}
+            cardAttr3={cardAttr3}
+            cardImage={cardImage}
+            cardRare={cardRare}
+            cardTrunfo={this.cardTrunfo}
+            isSaveButtonDisabled={isSaveButtonDisabled}
+            onInputChange={this.onInputChange}
+            onSaveButtonClick={this.onSaveButtonClick}
+            hasTrunfo={this.hasTrunfo()}
           />
           <Card
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ cardImage }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
+            cardName={cardName}
+            cardDescription={cardDescription}
+            cardAttr1={cardAttr1}
+            cardAttr2={cardAttr2}
+            cardAttr3={cardAttr3}
+            cardImage={cardImage}
+            cardRare={cardRare}
+            cardTrunfo={cardTrunfo}
           />
         </main>
         <CardDeck
-          cardCollection={ cardCollection }
+          cardCollection={cardCollection}
         />
       </div>
     );
