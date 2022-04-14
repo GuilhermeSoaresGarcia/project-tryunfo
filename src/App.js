@@ -1,13 +1,66 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import CardDeck from './components/CardDeck';
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      cardCollection: [],
+      cardCollection:
+        [
+          // {
+          //   cardName: 'Carta1',
+          //   cardDescription: 'Descrição',
+          //   cardAttr1: '10',
+          //   cardAttr2: '20',
+          //   cardAttr3: '55',
+          //   cardImage: 'imgcard',
+          //   cardRare: 'normal',
+          //   cardTrunfo: false,
+          // },
+          // {
+          //   cardName: 'Carta2',
+          //   cardDescription: 'Descrição',
+          //   cardAttr1: '10',
+          //   cardAttr2: '20',
+          //   cardAttr3: '55',
+          //   cardImage: 'imgcard',
+          //   cardRare: 'normal',
+          //   cardTrunfo: false,
+          // },
+          // {
+          //   cardName: 'Carta3',
+          //   cardDescription: 'Descrição',
+          //   cardAttr1: '10',
+          //   cardAttr2: '20',
+          //   cardAttr3: '55',
+          //   cardImage: 'imgcard',
+          //   cardRare: 'normal',
+          //   cardTrunfo: false,
+          // },
+          // {
+          //   cardName: 'Carta4',
+          //   cardDescription: 'Descrição',
+          //   cardAttr1: '10',
+          //   cardAttr2: '20',
+          //   cardAttr3: '55',
+          //   cardImage: 'imgcard',
+          //   cardRare: 'normal',
+          //   cardTrunfo: false,
+          // },
+          // {
+          //   cardName: 'Carta5',
+          //   cardDescription: 'Descrição',
+          //   cardAttr1: '10',
+          //   cardAttr2: '20',
+          //   cardAttr3: '55',
+          //   cardImage: 'imgcard',
+          //   cardRare: 'normal',
+          //   cardTrunfo: false,
+          // },
+        ],
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -109,6 +162,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
     };
+
     const { cardCollection } = this.state;
     cardCollection.push(card);
     this.clearFields();
@@ -117,6 +171,7 @@ class App extends React.Component {
   render() {
     const {
       cardName,
+      cardCollection,
       cardDescription,
       cardAttr1,
       cardAttr2,
@@ -130,29 +185,34 @@ class App extends React.Component {
     return (
       <div>
         <h1>Tryunfo</h1>
-        <Form
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ this.cardTrunfo }
-          isSaveButtonDisabled={ isSaveButtonDisabled }
-          onInputChange={ this.onInputChange }
-          onSaveButtonClick={ this.onSaveButtonClick }
-          hasTrunfo={ this.hasTrunfo() }
-        />
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
+        <main>
+          <Form
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ this.cardTrunfo }
+            isSaveButtonDisabled={ isSaveButtonDisabled }
+            onInputChange={ this.onInputChange }
+            onSaveButtonClick={ this.onSaveButtonClick }
+            hasTrunfo={ this.hasTrunfo() }
+          />
+          <Card
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+          />
+        </main>
+        <CardDeck
+          cardCollection={ cardCollection }
         />
       </div>
     );

@@ -20,7 +20,7 @@ class Form extends React.Component {
     } = this.props;
 
     return (
-      <div className="cadastro">
+      <section className="cadastro">
         <label htmlFor="name">
           <span>Nome da carta: </span>
           <input
@@ -136,7 +136,7 @@ class Form extends React.Component {
         >
           Salvar
         </button>
-      </div>
+      </section>
     );
   }
 }

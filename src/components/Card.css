@@ -1,0 +1,55 @@
+main {
+  width: 100%;
+  display: flex;
+
+}
+
+.cadastro {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: brown;
+  width: 50%;
+}
+
+.cadastro input {
+  width: auto;
+}
+
+.cadastro button {
+  margin-bottom: 20px;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: blue;
+  width: 50%;
+}
+
+.preview h1 {
+  align-self: center;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 750px;
+  width: 100%;
+}
+
+.card {
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 5%;
+  font-size: 12px;
+  height: 300px;
+  margin: 10px;
+  width: 200px;
+}
