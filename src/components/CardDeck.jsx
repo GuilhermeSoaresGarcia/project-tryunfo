@@ -13,7 +13,7 @@ class CardDeck extends React.Component {
             <div className="card">
 
               <h2 data-testid="name-card">
-                {item.cardname}
+                {item.cardName}
               </h2>
 
               <img
