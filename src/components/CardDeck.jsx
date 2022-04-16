@@ -2,70 +2,103 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
+// const image = require('./img/gato2.jpeg');
+
 class CardDeck extends React.Component {
   render() {
-    const { cardCollection } = this.props;
+    const { cardCollection, onDeleteButtonClick } = this.props;
 
     return (
-      <section className="card-deck">
-        {cardCollection.map((item, index) => (
-          <div key={ index }>
-            <div className="card">
+      <>
+        {cardCollection.map((
+          {
+            cardName,
+            cardImage,
+            cardDescription,
+            cardAttr1,
+            cardAttr2,
+            cardAttr3,
+            cardRare,
+            cardTrunfo,
+          }, index,
+        ) => (
+          (
+            <div className="card-container" key={ index }>
+              <div className={ cardTrunfo ? 'card trunfo' : 'card' }>
+                <div className="card-core">
+                  <h1 data-testid="name-card">
+                    {cardName}
+                  </h1>
 
-              <h2 data-testid="name-card">
-                {item.cardName}
-              </h2>
+                  <div className="card-img">
+                    <img
+                      src={ cardImage }
+                      // src={ image }
+                      alt={ cardName }
+                      data-testid="image-card"
+                    />
+                  </div>
 
-              <img
-                src={ item.cardImage }
-                alt={ item.cardName }
-                data-testid="image-card"
-              />
+                  <p className="card-description" data-testid="description-card">
+                    {cardDescription}
+                  </p>
 
-              <p data-testid="description-card">
-                {item.cardDescription}
-              </p>
+                  <div className="card-atribbs">
+                    <p>
+                      Atributo 1:
+                    </p>
+                    <div data-testid="attr1-card">{cardAttr1}</div>
 
-              <p data-testid="attr1-card">
-                <span>Atributo 1: </span>
-                {item.cardAttr1}
-              </p>
+                    <p>
+                      Atributo 2:
+                    </p>
+                    <div data-testid="attr2-card">{cardAttr2}</div>
 
-              <p data-testid="attr2-card">
-                <span>Atributo 2: </span>
-                {item.cardAttr2}
-              </p>
+                    <p>
+                      Atributo 3:
+                    </p>
+                    <div data-testid="attr3-card">{cardAttr3}</div>
 
-              <p data-testid="attr3-card">
-                <span>Atributo 3: </span>
-                {item.cardAttr3}
-              </p>
+                    <p>
+                      Raridade:
+                    </p>
+                    <div data-testid="rare-card">
+                      {cardRare}
+                    </div>
+                  </div>
 
-              <p data-testid="rare-card">
-                <span>Raridade: </span>
-                {item.cardRare}
-              </p>
+                  {
+                    () => { // Isso é porque o lint está de sacanagem comigo...
+                      if (cardTrunfo) {
+                        <span
+                          className="trunfo"
+                          data-testid="trunfo-card"
+                        >
+                          Super Trunfo
+                        </span>;
+                      }
+                    }
+                  }
 
-              <p data-testid="trunfo-card" trunfo-input>
-                {item.cardTrunfo && 'Super Trunfo'}
-              </p>
-            </div>
-            <button
-              type="button"
-              data-testid="delete-button"
-              onClick={ (event) => { console.log(event.target.parentElement); } }
-            >
-              Excluir
-            </button>
-          </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                data-testid="delete-button"
+                onClick={ onDeleteButtonClick }
+              >
+                Excluir
+              </button>
+            </div>)
         ))}
-      </section>
+      </>
     );
   }
 }
 
 CardDeck.propTypes = {
   cardCollection: PropTypes.func.isRequired,
+  onDeleteButtonClick: PropTypes.func.isRequired,
 };
 
 export default CardDeck;

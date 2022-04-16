@@ -119,6 +119,17 @@ class App extends React.Component {
     this.clearFields();
   }
 
+  onDeleteButtonClick = (target) => {
+    const { cardCollection } = this.state;
+    const cardCollectionCopyArray = cardCollection;
+    const { key } = Object.values(target.currentTarget.parentElement)[0];
+    cardCollectionCopyArray.splice(key, 1);
+
+    this.setState(() => ({
+      cardCollection: cardCollectionCopyArray,
+    }));
+  }
+
   render() {
     const {
       cardName,
@@ -151,20 +162,28 @@ class App extends React.Component {
             onSaveButtonClick={ this.onSaveButtonClick }
             hasTrunfo={ this.hasTrunfo() }
           />
-          <Card
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ cardImage }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-          />
+          <section className="preview">
+            <Card
+              cardName={ cardName }
+              cardDescription={ cardDescription }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardImage={ cardImage }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+            />
+          </section>
         </main>
-        <CardDeck
-          cardCollection={ cardCollection }
-        />
+        <section className="card-deck">
+          <div className="card-deck-title">
+            <h1>Baralho de cartas</h1>
+          </div>
+          <CardDeck
+            cardCollection={ cardCollection }
+            onDeleteButtonClick={ this.onDeleteButtonClick }
+          />
+        </section>
       </div>
     );
   }
