@@ -44,7 +44,7 @@
 }
 
 .card-container button {
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 10px;
 }
 
@@ -117,21 +117,21 @@
 
 .card-atribbs div {
   color: red;
-  font-family: Times New Roman, Times, serif;
+  font-family: Times New Roman , Times , serif;
   font-size: 30px;
   margin-left: 200px;
   margin-top: -40px;
   position: absolute;
 }
 
-.card-atribbs div:nth-child(8) {
+.card-atribbs div:nth-child( 8 ) {
   font-size: 30px;
   margin-left: 100px;
   margin-top: -40px;
   position: absolute;
 }
 
-.card-atribbs p:nth-child(7) {
+.card-atribbs p:nth-child( 7 ) {
   border-radius: 0 0 10px 10px;
 }
 
