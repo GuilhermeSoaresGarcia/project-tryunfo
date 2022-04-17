@@ -119,16 +119,14 @@
   color: red;
   font-family: Times New Roman , Times , serif;
   font-size: 30px;
-  margin-left: 200px;
-  margin-top: -40px;
+  margin-top: -38px;
   position: absolute;
+  text-align: right;
+  width: 230px;
 }
 
-.card-atribbs div:nth-child( 8 ) {
-  font-size: 30px;
-  margin-left: 100px;
-  margin-top: -40px;
-  position: absolute;
+.card-atribbs div:first-letter {
+  text-transform: capitalize;
 }
 
 .card-atribbs p:nth-child( 7 ) {
