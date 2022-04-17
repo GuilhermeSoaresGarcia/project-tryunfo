@@ -68,7 +68,7 @@ class CardDeck extends React.Component {
                   </div>
 
                   {
-                    () => { // Isso é porque o lint está de sacanagem comigo...
+                    (() => { // Esso sujeira toda, infelizmente,  é por causa das cobranças do lint e dos warnings do react. Sugestão encontrada aqui: https://stackoverflow.com/a/48371665/18172843
                       if (cardTrunfo) {
                         <span
                           className="trunfo"
@@ -77,7 +77,7 @@ class CardDeck extends React.Component {
                           Super Trunfo
                         </span>;
                       }
-                    }
+                    })()
                   }
 
                 </div>
@@ -97,7 +97,7 @@ class CardDeck extends React.Component {
 }
 
 CardDeck.propTypes = {
-  cardCollection: PropTypes.func.isRequired,
+  cardCollection: PropTypes.arrayOf(PropTypes.object).isRequired,
   onDeleteButtonClick: PropTypes.func.isRequired,
 };
 
