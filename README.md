@@ -1,16 +1,28 @@
-# 🚧 README em construção 🚧
+# Tryunfo Project
 
-<!-- Olá, Tryber!
+# Contexto
+Este projeto propunha a fixação de alguns conceitos de uso frequente do React, tais como manipulação do estado e implementação de formulários controlados, para desenvolver um deck de cartas similar ao um "Super Trunfo". É possível pré-visualizar as cartas, incluí-las e excluí-las do deck.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+> Manipulação do estado da aplicação;
 
-É essencial que você preencha esse documento por conta própria, ok?
+> Implementação de formulários controlados;
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+> Transmitir informações de componentes filhos para componentes pais via callbacks.
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+## Tecnologias usadas
 
--->
+> Desenvolvido usando: React e CSS na estilização das cartas.
+
+## Instalando dependências
+```
+npm install
+```
+
+## Executando aplicação
+```
+npm start
+```
+
+## Preview
+
+https://user-images.githubusercontent.com/87393731/177594258-ba478912-b951-4b58-ac05-574e36311211.mp4
