@@ -25,4 +25,4 @@ npm start
 
 ## Preview
 
-https://user-images.githubusercontent.com/87393731/177594258-ba478912-b951-4b58-ac05-574e36311211.mp4
+https://user-images.githubusercontent.com/87393731/188354392-0565bdb8-16e5-402e-ae19-26bc54672d46.mp4
