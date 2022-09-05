@@ -1,7 +1,7 @@
 # Tryunfo Project
 
 # Contexto
-Este projeto propunha a fixação de alguns conceitos de uso frequente do React, tais como manipulação do estado e implementação de formulários controlados, para desenvolver um deck de cartas similar ao um "Super Trunfo". É possível pré-visualizar as cartas, incluí-las e excluí-las do deck.
+Este projeto propunha a fixação de alguns conceitos de uso frequente do React, tais como manipulação do estado e implementação de formulários controlados, para desenvolver um deck de cartas similar ao "Super Trunfo". É possível pré-visualizar as cartas, incluí-las e excluí-las do deck.
 
 > Manipulação do estado da aplicação;
 
